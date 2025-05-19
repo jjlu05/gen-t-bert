@@ -1,0 +1,15 @@
+{
+    "num_sources": 1,
+    "avg_matrix_initialization": 2.350130558013916,
+    "avg_matrix_traversal": 0.0,
+    "avg_all": 2.381802797317505,
+    "company.csv": {
+        "matrix_initialization": [
+            2.350130558013916
+        ],
+        "matrix_traversal": [
+            0.0
+        ],
+        "all": 2.381802797317505
+    }
+}

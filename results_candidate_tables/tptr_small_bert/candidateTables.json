@@ -1,0 +1,137 @@
+{
+    "book.csv": {
+        "lake_table_14.csv": {
+            "author": "author",
+            "book_id": "book_id",
+            "title": "title"
+        },
+        "lake_table_24.csv": {
+            "author": "author",
+            "book_id": "book_id",
+            "title": "title"
+        },
+        "lake_table_34.csv": {
+            "author": "author",
+            "book_id": "book_id",
+            "title": "title"
+        },
+        "lake_table_4.csv": {
+            "author": "author",
+            "book_id": "book_id",
+            "title": "title"
+        },
+        "lake_table_44.csv": {
+            "author": "author",
+            "book_id": "book_id",
+            "title": "title"
+        }
+    },
+    "company.csv": {
+        "lake_table_12.csv": {
+            "company_name": "company_name",
+            "company_id": "company_id",
+            "hq_city": "hq_city"
+        },
+        "lake_table_2.csv": {
+            "company_name": "company_name",
+            "company_id": "company_id",
+            "hq_city": "hq_city"
+        },
+        "lake_table_22.csv": {
+            "company_name": "company_name",
+            "company_id": "company_id",
+            "hq_city": "hq_city"
+        },
+        "lake_table_32.csv": {
+            "company_name": "company_name",
+            "company_id": "company_id",
+            "hq_city": "hq_city"
+        },
+        "lake_table_42.csv": {
+            "company_name": "company_name",
+            "company_id": "company_id",
+            "hq_city": "hq_city"
+        }
+    },
+    "event.csv": {
+        "lake_table_13.csv": {
+            "event_id": "event_id",
+            "event_name": "event_name",
+            "location": "location"
+        },
+        "lake_table_23.csv": {
+            "event_id": "event_id",
+            "event_name": "event_name",
+            "location": "location"
+        },
+        "lake_table_3.csv": {
+            "event_id": "event_id",
+            "event_name": "event_name",
+            "location": "location"
+        },
+        "lake_table_33.csv": {
+            "event_id": "event_id",
+            "event_name": "event_name",
+            "location": "location"
+        },
+        "lake_table_43.csv": {
+            "event_id": "event_id",
+            "event_name": "event_name",
+            "location": "location"
+        }
+    },
+    "person.csv": {
+        "lake_table_1.csv": {
+            "name": "name",
+            "person_id": "person_id",
+            "birthplace": "birthplace"
+        },
+        "lake_table_11.csv": {
+            "name": "name",
+            "person_id": "person_id",
+            "birthplace": "birthplace"
+        },
+        "lake_table_21.csv": {
+            "name": "name",
+            "person_id": "person_id",
+            "birthplace": "birthplace"
+        },
+        "lake_table_31.csv": {
+            "name": "name",
+            "person_id": "person_id",
+            "birthplace": "birthplace"
+        },
+        "lake_table_41.csv": {
+            "name": "name",
+            "person_id": "person_id",
+            "birthplace": "birthplace"
+        }
+    },
+    "school.csv": {
+        "lake_table_0.csv": {
+            "school_id": "school_id",
+            "city": "city",
+            "school_name": "school_name"
+        },
+        "lake_table_10.csv": {
+            "school_id": "school_id",
+            "city": "city",
+            "school_name": "school_name"
+        },
+        "lake_table_20.csv": {
+            "school_id": "school_id",
+            "city": "city",
+            "school_name": "school_name"
+        },
+        "lake_table_30.csv": {
+            "school_id": "school_id",
+            "city": "city",
+            "school_name": "school_name"
+        },
+        "lake_table_40.csv": {
+            "school_id": "school_id",
+            "city": "city",
+            "school_name": "school_name"
+        }
+    }
+}

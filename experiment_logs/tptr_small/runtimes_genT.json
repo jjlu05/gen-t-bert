@@ -1,0 +1,51 @@
+{
+    "num_sources": 5,
+    "avg_matrix_initialization": 0.07666902542114258,
+    "avg_matrix_traversal": 0.0003777980804443359,
+    "avg_all": 0.13948822021484375,
+    "book.csv": {
+        "matrix_initialization": [
+            0.08858323097229004
+        ],
+        "matrix_traversal": [
+            0.0018889904022216797
+        ],
+        "all": 0.15601539611816406
+    },
+    "company.csv": {
+        "matrix_initialization": [
+            0.07935237884521484
+        ],
+        "matrix_traversal": [
+            0.0
+        ],
+        "all": 0.13949275016784668
+    },
+    "event.csv": {
+        "matrix_initialization": [
+            0.08026695251464844
+        ],
+        "matrix_traversal": [
+            0.0
+        ],
+        "all": 0.14540719985961914
+    },
+    "person.csv": {
+        "matrix_initialization": [
+            0.08199238777160645
+        ],
+        "matrix_traversal": [
+            0.0
+        ],
+        "all": 0.14846134185791016
+    },
+    "school.csv": {
+        "matrix_initialization": [
+            0.053150177001953125
+        ],
+        "matrix_traversal": [
+            0.0
+        ],
+        "all": 0.10806441307067871
+    }
+}

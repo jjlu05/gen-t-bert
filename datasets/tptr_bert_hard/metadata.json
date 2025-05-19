@@ -1,0 +1,6 @@
+{
+  "dataset_name": "tptr_bert_hard",
+  "source_tables": [
+    "company.csv"
+  ]
+}

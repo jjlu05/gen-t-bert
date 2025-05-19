@@ -1,0 +1,9 @@
+{
+    "company.csv": {
+        "lake_table_0.csv": {
+            "hq_city\r": "hq_city\r",
+            "company_id": "company_id",
+            "company_name": "company_name"
+        }
+    }
+}

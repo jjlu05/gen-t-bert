@@ -1,0 +1,52 @@
+[
+  [
+    "NYC",
+    "hasLocation",
+    "Park Square"
+  ],
+  [
+    "LA",
+    "hasLocation",
+    "Park Square"
+  ],
+  [
+    "NYC",
+    "hasMayor",
+    "Eric Adams"
+  ],
+  [
+    "LA",
+    "hasMayor",
+    "Karen Bass"
+  ],
+  [
+    "book.csv",
+    "containsAuthor",
+    "Jane Austen"
+  ],
+  [
+    "lake_table_14.csv",
+    "containsAuthor",
+    "Jane Austen"
+  ],
+  [
+    "Boston",
+    "hasUniversity",
+    "Harvard"
+  ],
+  [
+    "Cambridge",
+    "hasUniversity",
+    "Harvard"
+  ],
+  [
+    "company.csv",
+    "headquarteredIn",
+    "New York"
+  ],
+  [
+    "lake_table_12.csv",
+    "headquarteredIn",
+    "New York"
+  ]
+]
