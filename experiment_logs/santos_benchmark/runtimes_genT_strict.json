@@ -1,0 +1,11 @@
+{
+    "num_sources": 1,
+    "avg_row_validation": 285.95094180107117,
+    "avg_cell_validation": 139.27400732040405,
+    "avg_all": 285.9753329753876,
+    "workforce_management_information_a.csv": {
+        "row_validation": 285.95094180107117,
+        "cell_validation": 139.27400732040405,
+        "all": 285.9753329753876
+    }
+}

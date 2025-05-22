@@ -4,55 +4,42 @@ import os
 import time
 import numpy as np
 from functools import reduce
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "code")))
-import utils
+import sys
 import json
 from pandas.api.types import is_numeric_dtype
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "code")))
+import utils
 
-
-
-from bert_utils import bert_similarity  # make sure this import works
-
-def get_set_overlap(sourceCol, lakeDfs, threshold, use_bert=False):
+def get_set_overlap(sourceCol, lakeDfs, threshold):
     '''
-    Get tables with columns that have set or BERT overlap with the source column.
+    Get tables with columns that have a set overlap with current source column above threshold
+    Args: 
+        sourceCol (pd.Series): current column in the Source Table that we use to query
+        lakeDfs (dict): tableName: {each column: list of column values as strings}
+        threshold (float): similarity threshold
     '''
-    all_similarities = {}  # table: overlap score > threshold
-    similar_columns = {}   # table: (mostSimilarCol, list of values)
-    
+    all_similarities = {} # table: overlap score > threshold
+    similar_columns = {} # table: (mostCommonCol, list of values of most common column with source)
+    # Convert every data value to strings, so there are no mismatches from data types
     source_col_set = set([str(q).rstrip() for q in sourceCol if not pd.isna(q)])
-    source_col_vals = [str(q).rstrip() for q in sourceCol if not pd.isna(q)]
-
-    for table, colMap in lakeDfs.items():
-        best_score = 0.0
-        best_col = None
-        best_vals = []
-
-        for col, vals in colMap.items():
-            col_vals = [str(v).rstrip() for v in vals if not pd.isna(v)]
-            intersection = set(source_col_set).intersection(set(col_vals))
-            score = len(intersection) / len(source_col_set) if source_col_set else 0
-
-            if use_bert and score < threshold:
-                # fallback to BERT if overlap is weak
-                bert_scores = [bert_similarity(sv, lv) for sv in source_col_vals for lv in col_vals]
-                score = np.mean(bert_scores) if bert_scores else 0
-
-            if score > best_score:
-                best_score = score
-                best_col = col
-                best_vals = col_vals
-
-        if best_score >= threshold:
-            all_similarities[table] = best_score
-            similar_columns[table] = (best_col, best_vals)
-
-    all_similarities = {
-        k: v for k, v in sorted(all_similarities.items(), key=lambda item: item[1], reverse=True)
-    }
+    # compute Set Overlap
+    for table in lakeDfs:
+        # for each table, find a column that contains the highest set overlap with current source col, and check if > threshold
+        max_ind_overlap = 0.0
+        for col in lakeDfs[table]: # for each column in current data lake table
+            col_vals = lakeDfs[table][col] # list of values
+            overlap = len(list(source_col_set.intersection(set(col_vals)))) # set intersection
+            
+            if overlap > max_ind_overlap:
+                max_ind_overlap = overlap
+                similar_columns[table] = (col, col_vals)
+        # Only add if the overlap / length of source set is greater than threshold
+        if (max_ind_overlap / len(source_col_set)) >= threshold:
+            # if col_vals and (len(set(col_vals)) - overlap)/len(set(col_vals)) < (overlap)/len(set(col_vals)): # majority is not noise
+            all_similarities[table] = (max_ind_overlap / len(source_col_set))
+    # Sort similarities by similarity score in decreasing order
+    all_similarities = {k: v for k, v in sorted(all_similarities.items(), key=lambda item: item[1], reverse=True)}
     return all_similarities, similar_columns
-
 
 def get_diverse_set_overlap(sourceCol, lakeDfs, threshold):
     '''
@@ -65,44 +52,22 @@ def get_diverse_set_overlap(sourceCol, lakeDfs, threshold):
         diverse_table_similarities (dict): table: (column that has high overlap with sourceCol, score)
         table_source_similarities (dict): returned from get_set_overlap (table: overlap score)
     '''
-    table_source_similarities, similar_df_columns = get_set_overlap(sourceCol, lakeDfs, threshold, use_bert=True)
-
-    print("\n>>> DEBUG: similar_df_columns keys:")
-    print(list(similar_df_columns.keys()))
-    print(">>> DEBUG: table_source_similarities keys:")
-    print(list(table_source_similarities.keys()))
-
+    # table_source_similarities (dict): DL table: maximum individual overlap
+    # similar_df_columns (dict): DL table: (1 most common col, column values)
+    table_source_similarities, similar_df_columns = get_set_overlap(sourceCol, lakeDfs, threshold)
     diverse_table_similarities = {}
-    keys = list(table_source_similarities.keys())
-
-    for tableIndx, currSimTable in enumerate(keys):
-        tableScore = table_source_similarities[currSimTable]
-
-        if currSimTable not in similar_df_columns:
-            print(f"[WARN] Skipping {currSimTable}: not found in similar_df_columns")
-            continue
-
-        currTableCol = similar_df_columns[currSimTable][1]
+    for tableIndx, (currSimTable, tableScore) in enumerate(table_source_similarities.items()):
         diverse_score = tableScore
-
-        if tableIndx > 0:
-            prevSimTable = keys[tableIndx - 1]
-            if prevSimTable not in similar_df_columns:
-                print(f"[WARN] Skipping diversity penalty for {currSimTable} (missing prev table {prevSimTable})")
-            else:
-                prevTableCol = similar_df_columns[prevSimTable][1]
-                prev_curr_overlap = len(set(currTableCol).intersection(set(prevTableCol)))
-                if len(set(currTableCol)) > 0:
-                    diverse_score -= (prev_curr_overlap / len(set(currTableCol)))
-
+        currTableCol = similar_df_columns[currSimTable][1]
+        if tableIndx > 0: 
+            prevSimTable = list(table_source_similarities.keys())[tableIndx-1]
+            prevTableCol = similar_df_columns[prevSimTable][1]
+            # sim(currTable, sourceTable) - sim(currTable, prevTable)
+            prev_curr_overlap = len(list(set(currTableCol).intersection(set(prevTableCol))))
+            diverse_score -= (prev_curr_overlap / len(set(currTableCol)))
         diverse_table_similarities[currSimTable] = (similar_df_columns[currSimTable][0], diverse_score)
-
-    # Sort by decreasing diverse score
-    diverse_table_similarities = {
-        k: v for k, v in sorted(diverse_table_similarities.items(), key=lambda item: item[1][1], reverse=True)
-    }
+    diverse_table_similarities = {k: v for k, v in sorted(diverse_table_similarities.items(), key=lambda item: item[1][1], reverse=True)}
     return diverse_table_similarities, table_source_similarities
-
         
 def checkSubsumedTables(tableDfs, candidateTablesFound, tables_aligned_tuple_indxes, sourceTable):
     '''
@@ -205,6 +170,7 @@ def get_lake(benchmark, sourceTableName, rawLakeDfs, allLakeTableCols, starmie_c
 
 
 def main(benchmark, sourceTableName, sim_threshold, rawLakeDfs, allLakeTableCols, starmie_candidates):
+    
     '''
     Get Tables whose columns have high set overlap with Source Table's columns
     Args:
@@ -351,9 +317,10 @@ def main(benchmark, sourceTableName, sim_threshold, rawLakeDfs, allLakeTableCols
                     candidateTablesFound.pop(dl_table)
     if len(candidateTablesFound) == 0: noCandidates = 1
     
+
     if not noCandidates:
         candidateTablesFound = checkSubsumedTables(rawLakeDfs, candidateTablesFound, tables_aligned_tuple_indxes, source_df)
         print("%d total tables returned" % (len(candidateTablesFound)))      
         print("Average source TIME: %.2f seconds " % (sum(source_times)/len(source_times)))
-    return candidateTablesFound, noCandidates
     
+    return candidateTablesFound, noCandidates

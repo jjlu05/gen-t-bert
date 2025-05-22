@@ -1,0 +1,30 @@
+{
+    "num_sources": 5,
+    "avg_row_validation": 0.00019674301147460939,
+    "avg_all": 0.005215644836425781,
+    "book.csv": {
+        "row_validation": 0.0009837150573730469,
+        "cell_validation": 0,
+        "all": 0.01321721076965332
+    },
+    "company.csv": {
+        "row_validation": 0.0,
+        "cell_validation": 0,
+        "all": 0.0
+    },
+    "event.csv": {
+        "row_validation": 0.0,
+        "cell_validation": 0,
+        "all": 0.0
+    },
+    "person.csv": {
+        "row_validation": 0.0,
+        "cell_validation": 0,
+        "all": 0.00885915756225586
+    },
+    "school.csv": {
+        "row_validation": 0.0,
+        "cell_validation": 0,
+        "all": 0.0040018558502197266
+    }
+}

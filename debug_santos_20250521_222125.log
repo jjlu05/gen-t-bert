@@ -1,0 +1,76 @@
+2025-05-21 22:21:27,286 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:27,459 - DEBUG - https://huggingface.co:443 "GET /api/models/bert-base-uncased HTTP/1.1" 307 76
+2025-05-21 22:21:27,517 - DEBUG - https://huggingface.co:443 "GET /api/models/google-bert/bert-base-uncased HTTP/1.1" 200 4437
+2025-05-21 22:21:27,525 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:27,633 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2025-05-21 22:21:27,641 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:27,796 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2025-05-21 22:21:27,803 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:27,986 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2025-05-21 22:21:27,995 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:28,114 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-05-21 22:21:28,122 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:28,240 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2025-05-21 22:21:28,339 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:28,474 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 22:21:28,670 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:28,820 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 22:21:28,821 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:28,959 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2025-05-21 22:21:30,433 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:30,568 - DEBUG - https://huggingface.co:443 "GET /api/models/bert-base-uncased HTTP/1.1" 307 76
+2025-05-21 22:21:30,633 - DEBUG - https://huggingface.co:443 "GET /api/models/google-bert/bert-base-uncased HTTP/1.1" 200 4437
+2025-05-21 22:21:30,641 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:30,826 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2025-05-21 22:21:30,833 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:30,967 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2025-05-21 22:21:30,975 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:31,123 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2025-05-21 22:21:31,132 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:31,261 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-05-21 22:21:31,269 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:31,383 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2025-05-21 22:21:31,391 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:31,498 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 22:21:31,583 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:31,733 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 22:21:31,740 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 22:21:31,855 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2025-05-21 22:21:33,227 - INFO - Successfully imported all required modules
+2025-05-21 22:21:33,227 - INFO - Running with arguments: {'use_bert': True, 'validation_mode': 'strict', 'cell_weight': 0.3, 'benchmark': 'santos_benchmark', 'saveMT': 1, 'save_report': False}
+2025-05-21 22:21:33,227 - INFO - Looking for datasets in: datasets\santos_benchmark\query
+2025-05-21 22:21:33,227 - INFO - Loading candidate tables from: results_candidate_tables\santos_benchmark\candidateTables.json
+2025-05-21 22:21:33,227 - INFO - Loaded 1 entries from candidate tables file
+2025-05-21 22:21:33,227 - INFO - Sample candidate key: workforce_management_information_a.csv
+2025-05-21 22:21:33,227 - INFO - Sample entry has 1 candidate tables
+2025-05-21 22:21:33,227 - INFO - Found 1 source tables
+2025-05-21 22:21:33,227 - INFO - Dataset 0: workforce_management_information_a.csv
+2025-05-21 22:21:33,227 - INFO - Checking originating tables at: results_candidate_tables\santos_benchmark\originatingTables.json
+2025-05-21 22:21:33,235 - INFO - Loaded 1 entries from originating tables file
+2025-05-21 22:21:33,235 - INFO - Sample ground truth key: workforce_management_information_a.csv
+2025-05-21 22:21:33,235 - INFO - Sample entry: {'workforce_management_information_4.csv': {}}
+2025-05-21 22:21:33,235 - INFO - 
+=========== 0) Source Table: workforce_management_information_a.csv ===========
+2025-05-21 22:21:33,235 - INFO - Loading source table from: datasets\santos_benchmark\query\workforce_management_information_a.csv
+2025-05-21 22:21:33,245 - INFO - Source table loaded: 17 rows, 41 columns
+2025-05-21 22:21:33,247 - DEBUG - Source table columns: ['Organisation Name', 'Organisation Type', 'Main, parent or sponsoring department', 'Payroll staff AO/AA Headcount', 'Payroll staff AO/AA Full-time Equivalent', 'Payroll staff EO Headcount', 'Payroll staff EO Full-time Equivalent', 'Payroll staff SEO/HEO Headcount', 'Payroll staff SEO/HEO Full-time Equivalent', 'Payroll staff Grade 6/7 Headcount', 'Payroll staff Grade 6/7 Full-time Equivalent', 'Payroll staff SCS Headcount', 'Payroll staff SCS Full-time Equivalent', 'Payroll staff Other, unknown or unspecified Headcount', 'Payroll staff Other, unknown or unspecified Full-time Equivalent', 'Payroll staff Total Employees Headcount', 'Payroll staff Total Employees Full-time Equivalent', 'Non-payroll Staff Agency staff (clerical/admin) Headcount', 'Non-payroll Staff Agency staff (clerical/admin) Full-time Equivalent', 'Non-payroll Staff Intermin Managers Headcount', 'Non-payroll Staff Interim Managers Full-time Equivalent', 'Non-payroll Staff Specialist Contractors Headcount', 'Non-payroll Staff Specialist Contractors Full-time Equivalent', 'Non-payroll Staff Consultants/Consultancy Headcount', 'Non-payroll Staff Consultants/Consultancy Full-time Equivalent', 'Non-payroll Staff Total Employees Headcount', 'Non-payroll Staff Total Employees Full-time Equivalent', 'Grand Total (workforce numbers) Headcount', 'Grand Total (workforce numbers) Full-time Equivalent', 'Payroll Staff Costs Salary', 'Payroll Staff Costs Allowances', 'Payroll Staff Costs Non-consolidated performance payments', 'Payroll Staff Costs Overtime', 'Payroll Staff Costs Employer pension contributions', 'Payroll Staff Costs Employer national insurance contributions', 'Payroll Staff Costs Total paybill for payroll staff', 'Non-payroll Staff Total cost of contingent labour: agency (clerical and admin) staff, interim managers and specialist contractors', 'Non-payroll Staff Total cost of consultants/consultancy', 'Non-payroll Staff Total non-payroll (CCL) staff costs', 'Grand Total paybill/staffing (payroll and non-payroll) costs', 'Comments']
+2025-05-21 22:21:33,247 - DEBUG - Source table first row: ['Department for Environment, Food and Rural Affairs', 'Ministerial Department', 'Department for Environment, Food and Rural Affairs', '166', '157.95', '317', '301.99', '965', '931.35', '543', '523.23', '95', '91.55', '0', '0', '2086', '2006.07', '18', '18', '12', '12', '67', '67', '1', '1', '98', '98', '2184', '2104.07', '£7,439,499', '£5,584', '£38,123', '£22,889', '£1,345,257', '£585,516', '£9,436,868', '£858,347', '£19,624', '£877,971', '£10,314,839', nan]
+2025-05-21 22:21:33,247 - INFO - Using strict validation mode with cell_weight=0.3
+2025-05-21 22:21:33,247 - DEBUG - Checking candidate table: workforce_management_information_4.csv
+2025-05-21 22:21:33,252 - DEBUG - Loaded candidate table: 17 rows, 42 columns
+2025-05-21 22:23:59,924 - DEBUG - Row-level score for workforce_management_information_4.csv: 1.0
+2025-05-21 22:26:19,198 - DEBUG - Cell-level validation for workforce_management_information_4.csv: row=1.0, cell=0.42251461988304095, combined=0.7690058479532164
+2025-05-21 22:26:19,198 - INFO - Sorted candidates: [('workforce_management_information_4.csv', 0.8267543859649122)]
+2025-05-21 22:26:19,200 - INFO - Final Scores for workforce_management_information_a.csv (using threshold=0.85, cell_weight=0.3):
+2025-05-21 22:26:19,201 - INFO -   workforce_management_information_4.csv: 0.8268
+2025-05-21 22:26:19,201 - INFO - Selected originating tables: []
+2025-05-21 22:26:19,204 - DEBUG - Ground truth for workforce_management_information_a.csv: {'workforce_management_information_4.csv': {}}
+2025-05-21 22:26:19,213 - INFO - 
+============================================
+2025-05-21 22:26:19,217 - INFO - Saved runtime statistics to experiment_logs\santos_benchmark\runtimes_genT_strict.json
+2025-05-21 22:26:19,217 - INFO - 
+ FINAL TOP-1 ACCURACY: 0/1 = 0.00%
+2025-05-21 22:26:19,219 - INFO - FINISHED ALL 1 SOURCES IN 285.983 seconds (4.77 min, 0.08 hrs)
+2025-05-21 22:26:19,219 - INFO - 
+Validation Mode: strict
+2025-05-21 22:26:19,221 - INFO - Cell Weight: 0.30

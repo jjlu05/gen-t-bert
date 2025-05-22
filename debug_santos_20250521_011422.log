@@ -1,0 +1,235 @@
+2025-05-21 01:14:23,982 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:24,114 - DEBUG - https://huggingface.co:443 "GET /api/models/bert-base-uncased HTTP/1.1" 307 76
+2025-05-21 01:14:24,234 - DEBUG - https://huggingface.co:443 "GET /api/models/google-bert/bert-base-uncased HTTP/1.1" 200 4437
+2025-05-21 01:14:24,240 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:24,348 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2025-05-21 01:14:24,352 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:24,480 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2025-05-21 01:14:24,487 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:24,595 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2025-05-21 01:14:24,603 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:24,753 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-05-21 01:14:24,770 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:24,877 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2025-05-21 01:14:24,968 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:25,096 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 01:14:25,354 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:25,457 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 01:14:25,465 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:25,570 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2025-05-21 01:14:26,852 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:26,951 - DEBUG - https://huggingface.co:443 "GET /api/models/bert-base-uncased HTTP/1.1" 307 76
+2025-05-21 01:14:27,138 - DEBUG - https://huggingface.co:443 "GET /api/models/google-bert/bert-base-uncased HTTP/1.1" 200 4437
+2025-05-21 01:14:27,145 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:27,854 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2025-05-21 01:14:27,868 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:28,003 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2025-05-21 01:14:28,005 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:28,129 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2025-05-21 01:14:28,135 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:28,268 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-05-21 01:14:28,274 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:28,386 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2025-05-21 01:14:28,401 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:28,535 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 01:14:28,636 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:29,287 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-05-21 01:14:29,301 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-21 01:14:29,424 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2025-05-21 01:14:31,065 - INFO - Successfully imported all required modules
+2025-05-21 01:14:31,067 - INFO - Running with arguments: {'use_bert': True, 'validation_mode': 'hybrid', 'cell_weight': 0.3, 'benchmark': 'santos_benchmark', 'saveMT': 1, 'save_report': False}
+2025-05-21 01:14:31,067 - INFO - Looking for datasets in: datasets\santos_benchmark\query
+2025-05-21 01:14:31,067 - INFO - Found 50 source tables
+2025-05-21 01:14:31,067 - INFO - Dataset 0: 311_calls_historic_data_a.csv
+2025-05-21 01:14:31,067 - INFO - Dataset 1: abandoned_wells_a.csv
+2025-05-21 01:14:31,067 - INFO - Dataset 2: albums_a.csv
+2025-05-21 01:14:31,075 - INFO - Dataset 3: albums_b.csv
+2025-05-21 01:14:31,075 - INFO - Dataset 4: animal_tag_data_a.csv
+2025-05-21 01:14:31,075 - INFO - Loading candidate tables from: results_candidate_tables\santos_benchmark\candidateTables.json
+2025-05-21 01:14:31,075 - INFO - Loaded 1 entries from candidate tables file
+2025-05-21 01:14:31,075 - INFO - Sample candidate key: workforce_management_information_a.csv
+2025-05-21 01:14:31,075 - INFO - Sample entry has 1 candidate tables
+2025-05-21 01:14:31,075 - INFO - Checking originating tables at: results_candidate_tables\santos_benchmark\originatingTables.json
+2025-05-21 01:14:31,075 - INFO - Loaded 1 entries from originating tables file
+2025-05-21 01:14:31,075 - INFO - Sample ground truth key: workforce_management_information_a.csv
+2025-05-21 01:14:31,075 - INFO - Sample entry: {'workforce_management_information_4.csv': {}}
+2025-05-21 01:14:31,091 - INFO - 
+=========== 0) Source Table: 311_calls_historic_data_a.csv ===========
+2025-05-21 01:14:31,092 - WARNING - Source table 311_calls_historic_data_a.csv not found in candidate tables
+2025-05-21 01:14:31,092 - INFO - 
+=========== 1) Source Table: abandoned_wells_a.csv ===========
+2025-05-21 01:14:31,093 - WARNING - Source table abandoned_wells_a.csv not found in candidate tables
+2025-05-21 01:14:31,095 - INFO - 
+=========== 2) Source Table: albums_a.csv ===========
+2025-05-21 01:14:31,095 - WARNING - Source table albums_a.csv not found in candidate tables
+2025-05-21 01:14:31,097 - INFO - 
+=========== 3) Source Table: albums_b.csv ===========
+2025-05-21 01:14:31,097 - WARNING - Source table albums_b.csv not found in candidate tables
+2025-05-21 01:14:31,097 - INFO - 
+=========== 4) Source Table: animal_tag_data_a.csv ===========
+2025-05-21 01:14:31,097 - WARNING - Source table animal_tag_data_a.csv not found in candidate tables
+2025-05-21 01:14:31,099 - INFO - 
+=========== 5) Source Table: animal_tag_data_b.csv ===========
+2025-05-21 01:14:31,100 - WARNING - Source table animal_tag_data_b.csv not found in candidate tables
+2025-05-21 01:14:31,100 - INFO - 
+=========== 6) Source Table: biodiversity_a.csv ===========
+2025-05-21 01:14:31,100 - WARNING - Source table biodiversity_a.csv not found in candidate tables
+2025-05-21 01:14:31,100 - INFO - 
+=========== 7) Source Table: business_rates_a.csv ===========
+2025-05-21 01:14:31,103 - WARNING - Source table business_rates_a.csv not found in candidate tables
+2025-05-21 01:14:31,103 - INFO - 
+=========== 8) Source Table: cdc_nutrition_physical_activity_and_obesity_legislation_a.csv ===========
+2025-05-21 01:14:31,105 - WARNING - Source table cdc_nutrition_physical_activity_and_obesity_legislation_a.csv not found in candidate tables
+2025-05-21 01:14:31,105 - INFO - 
+=========== 9) Source Table: cihr_co-applicant_a.csv ===========
+2025-05-21 01:14:31,105 - WARNING - Source table cihr_co-applicant_a.csv not found in candidate tables
+2025-05-21 01:14:31,105 - INFO - 
+=========== 10) Source Table: cihr_co-applicant_b.csv ===========
+2025-05-21 01:14:31,105 - WARNING - Source table cihr_co-applicant_b.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 11) Source Table: civic_building_locations_a.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table civic_building_locations_a.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 12) Source Table: complaint_by_practice_a.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table complaint_by_practice_a.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 13) Source Table: complaint_by_practice_b.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table complaint_by_practice_b.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 14) Source Table: contributors_parties_a.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table contributors_parties_a.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 15) Source Table: contributors_parties_b.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table contributors_parties_b.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 16) Source Table: data_mill_a.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table data_mill_a.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 17) Source Table: data_mill_b.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table data_mill_b.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 18) Source Table: deaths_2012_2018_a.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table deaths_2012_2018_a.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 19) Source Table: film_locations_in_san_francisco_a.csv ===========
+2025-05-21 01:14:31,108 - WARNING - Source table film_locations_in_san_francisco_a.csv not found in candidate tables
+2025-05-21 01:14:31,108 - INFO - 
+=========== 20) Source Table: immigration_records_a.csv ===========
+2025-05-21 01:14:31,117 - WARNING - Source table immigration_records_a.csv not found in candidate tables
+2025-05-21 01:14:31,117 - INFO - 
+=========== 21) Source Table: ipopayments_a.csv ===========
+2025-05-21 01:14:31,117 - WARNING - Source table ipopayments_a.csv not found in candidate tables
+2025-05-21 01:14:31,117 - INFO - 
+=========== 22) Source Table: ipopayments_b.csv ===========
+2025-05-21 01:14:31,121 - WARNING - Source table ipopayments_b.csv not found in candidate tables
+2025-05-21 01:14:31,121 - INFO - 
+=========== 23) Source Table: job_pay_scales_a.csv ===========
+2025-05-21 01:14:31,123 - WARNING - Source table job_pay_scales_a.csv not found in candidate tables
+2025-05-21 01:14:31,123 - INFO - 
+=========== 24) Source Table: lane_description_a.csv ===========
+2025-05-21 01:14:31,125 - WARNING - Source table lane_description_a.csv not found in candidate tables
+2025-05-21 01:14:31,125 - INFO - 
+=========== 25) Source Table: lane_description_b.csv ===========
+2025-05-21 01:14:31,125 - WARNING - Source table lane_description_b.csv not found in candidate tables
+2025-05-21 01:14:31,125 - INFO - 
+=========== 26) Source Table: mines_a.csv ===========
+2025-05-21 01:14:31,127 - WARNING - Source table mines_a.csv not found in candidate tables
+2025-05-21 01:14:31,127 - INFO - 
+=========== 27) Source Table: mines_b.csv ===========
+2025-05-21 01:14:31,128 - WARNING - Source table mines_b.csv not found in candidate tables
+2025-05-21 01:14:31,128 - INFO - 
+=========== 28) Source Table: minister_meetings_a.csv ===========
+2025-05-21 01:14:31,128 - WARNING - Source table minister_meetings_a.csv not found in candidate tables
+2025-05-21 01:14:31,128 - INFO - 
+=========== 29) Source Table: monthly_data_feed_a.csv ===========
+2025-05-21 01:14:31,130 - WARNING - Source table monthly_data_feed_a.csv not found in candidate tables
+2025-05-21 01:14:31,130 - INFO - 
+=========== 30) Source Table: monthly_data_feed_b.csv ===========
+2025-05-21 01:14:31,131 - WARNING - Source table monthly_data_feed_b.csv not found in candidate tables
+2025-05-21 01:14:31,131 - INFO - 
+=========== 31) Source Table: new_york_city_restaurant_inspection_results_a.csv ===========
+2025-05-21 01:14:31,131 - WARNING - Source table new_york_city_restaurant_inspection_results_a.csv not found in candidate tables
+2025-05-21 01:14:31,131 - INFO - 
+=========== 32) Source Table: oil_and_gas_summary_production_data_1967_1999_a.csv ===========
+2025-05-21 01:14:31,132 - WARNING - Source table oil_and_gas_summary_production_data_1967_1999_a.csv not found in candidate tables
+2025-05-21 01:14:31,133 - INFO - 
+=========== 33) Source Table: practice_reference_a.csv ===========
+2025-05-21 01:14:31,133 - WARNING - Source table practice_reference_a.csv not found in candidate tables
+2025-05-21 01:14:31,133 - INFO - 
+=========== 34) Source Table: practice_reference_b.csv ===========
+2025-05-21 01:14:31,133 - WARNING - Source table practice_reference_b.csv not found in candidate tables
+2025-05-21 01:14:31,135 - INFO - 
+=========== 35) Source Table: prescribing_a.csv ===========
+2025-05-21 01:14:31,135 - WARNING - Source table prescribing_a.csv not found in candidate tables
+2025-05-21 01:14:31,135 - INFO - 
+=========== 36) Source Table: prescribing_b.csv ===========
+2025-05-21 01:14:31,135 - WARNING - Source table prescribing_b.csv not found in candidate tables
+2025-05-21 01:14:31,135 - INFO - 
+=========== 37) Source Table: psyckes_antipsychotic_polypharmacy_quality_indicators_beginning_2012_a.csv ===========
+2025-05-21 01:14:31,135 - WARNING - Source table psyckes_antipsychotic_polypharmacy_quality_indicators_beginning_2012_a.csv not found in candidate tables
+2025-05-21 01:14:31,135 - INFO - 
+=========== 38) Source Table: purchasing_card_a.csv ===========
+2025-05-21 01:14:31,135 - WARNING - Source table purchasing_card_a.csv not found in candidate tables
+2025-05-21 01:14:31,135 - INFO - 
+=========== 39) Source Table: report_card_discipline_for_2015_16_a.csv ===========
+2025-05-21 01:14:31,135 - WARNING - Source table report_card_discipline_for_2015_16_a.csv not found in candidate tables
+2025-05-21 01:14:31,135 - INFO - 
+=========== 40) Source Table: senior_officials_expenses_a.csv ===========
+2025-05-21 01:14:31,135 - WARNING - Source table senior_officials_expenses_a.csv not found in candidate tables
+2025-05-21 01:14:31,141 - INFO - 
+=========== 41) Source Table: stockport_contracts_a.csv ===========
+2025-05-21 01:14:31,141 - WARNING - Source table stockport_contracts_a.csv not found in candidate tables
+2025-05-21 01:14:31,141 - INFO - 
+=========== 42) Source Table: stockport_contracts_b.csv ===========
+2025-05-21 01:14:31,141 - WARNING - Source table stockport_contracts_b.csv not found in candidate tables
+2025-05-21 01:14:31,141 - INFO - 
+=========== 43) Source Table: time_spent_watching_vcr_movies_a.csv ===========
+2025-05-21 01:14:31,141 - WARNING - Source table time_spent_watching_vcr_movies_a.csv not found in candidate tables
+2025-05-21 01:14:31,141 - INFO - 
+=========== 44) Source Table: tuition_assistance_program_tap_recipients_a.csv ===========
+2025-05-21 01:14:31,141 - WARNING - Source table tuition_assistance_program_tap_recipients_a.csv not found in candidate tables
+2025-05-21 01:14:31,141 - INFO - 
+=========== 45) Source Table: wholesale_markets_a.csv ===========
+2025-05-21 01:14:31,141 - WARNING - Source table wholesale_markets_a.csv not found in candidate tables
+2025-05-21 01:14:31,141 - INFO - 
+=========== 46) Source Table: workforce_management_information_a.csv ===========
+2025-05-21 01:14:31,141 - INFO - Loading source table from: datasets\santos_benchmark\queries\workforce_management_information_a.csv
+2025-05-21 01:14:31,141 - ERROR - Error loading source table workforce_management_information_a.csv: [Errno 2] No such file or directory: 'datasets\\santos_benchmark\\queries\\workforce_management_information_a.csv'
+2025-05-21 01:14:31,167 - ERROR - Traceback (most recent call last):
+  File "code/discovery/runFindOriginatingTables_enhanced.py", line 168, in <module>
+    source_df = pd.read_csv(source_path)
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\parsers\readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\parsers\readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\parsers\readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\parsers\readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\parsers\base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "C:\Users\jacob\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets\\santos_benchmark\\queries\\workforce_management_information_a.csv'
+
+2025-05-21 01:14:31,167 - INFO - 
+=========== 47) Source Table: workforce_management_information_b.csv ===========
+2025-05-21 01:14:31,167 - WARNING - Source table workforce_management_information_b.csv not found in candidate tables
+2025-05-21 01:14:31,167 - INFO - 
+=========== 48) Source Table: ydn_spending_data_a.csv ===========
+2025-05-21 01:14:31,167 - WARNING - Source table ydn_spending_data_a.csv not found in candidate tables
+2025-05-21 01:14:31,167 - INFO - 
+=========== 49) Source Table: ydn_spending_data_b.csv ===========
+2025-05-21 01:14:31,167 - WARNING - Source table ydn_spending_data_b.csv not found in candidate tables
+2025-05-21 01:14:31,173 - INFO - 
+============================================
+2025-05-21 01:14:31,173 - INFO - Saved runtime statistics to experiment_logs\santos_benchmark\runtimes_genT_hybrid.json
+2025-05-21 01:14:31,173 - WARNING - Division by zero prevented: 0/0
+2025-05-21 01:14:31,182 - INFO - FINISHED ALL 0 SOURCES IN 0.107 seconds (0.00 min, 0.00 hrs)
+2025-05-21 01:14:31,182 - INFO - 
+Validation Mode: hybrid
+2025-05-21 01:14:31,182 - INFO - Cell Weight: 0.30

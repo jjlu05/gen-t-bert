@@ -68,7 +68,7 @@ if __name__ == '__main__':
     for i, filepath in enumerate(tqdm(datasets)):
         source_table = os.path.basename(filepath)
         print(f"\n=========== {i}) Source Table: {source_table} ===========")
-        source_candidates = starmie_candidates.get(source_table.replace(".csv", ""), []) if runStarmie else []
+        source_candidates = starmie_candidates.get(source_table.replace(".csv", ""), []) if runStarmie else list(lakeDfs.keys())
 
         candidateTablesFound, noCandidates = set_similarity.main(
             hp.benchmark,

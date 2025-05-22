@@ -1,19 +1,19 @@
 {
     "company.csv": {
         "lake_table_0.csv": {
+            "hq_city\r": "hq_city\r",
             "company_name": "company_name",
-            "company_id": "company_id",
-            "hq_city\r": "hq_city\r"
+            "company_id": "company_id"
         },
         "lake_table_1.csv": {
+            "hq_city\r": "hq_city\r",
             "company_name": "company_name",
-            "company_id": "company_id",
-            "hq_city\r": "hq_city\r"
+            "company_id": "company_id"
         },
         "lake_table_2.csv": {
+            "hq_city\r": "hq_city\r",
             "company_name": "company_name",
-            "company_id": "company_id",
-            "hq_city\r": "hq_city\r"
+            "company_id": "company_id"
         }
     }
 }
